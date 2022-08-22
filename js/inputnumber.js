@@ -14,7 +14,7 @@ addBtn.addEventListener('click', function () {
     // console.log(value);
     total += value;
     outPut.textContent = total;
-    inputSrt.value = ' ';
+    inputSrt.value = '';
 
     console.log(total);
 })
