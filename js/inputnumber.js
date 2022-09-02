@@ -8,7 +8,7 @@ let total = 0;
 addBtn.addEventListener('click', function () {
     // console.log(addBtn);
 
-    const value = Number(inputSrt.value)
+    const value = Number(inputSrt.value);
 
 
     // console.log(value);
