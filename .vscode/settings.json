@@ -2,5 +2,6 @@
   "template-string-converter.addBracketsToProps": true,
   "template-string-converter.autoRemoveTemplateString": true,
   "template-string-converter.convertOutermostQuotes": true,
-  "template-string-converter.enabled": false
+  "template-string-converter.enabled": false,
+  "liveServer.settings.port": 5502
 }

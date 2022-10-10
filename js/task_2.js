@@ -39,24 +39,24 @@
 // const array2 = [4, 30, 17, 10,60,12, 40];
 // let collectArray = [];
 // for (let i = 0; i < array1.length; i += 1) {
-    //     let indArray1 = array1[i];
+//         let indArray1 = array1[i];
 
-    //     for (let j = 0; j < array2.length; j += 1) {
-        //         let indArray2 = array2[j];
-        //         if (indArray1 === indArray2) {
-            //             collectArray.push(indArray1);
-            // }}  }
-            // console.log(collectArray);
+//         for (let j = 0; j < array2.length; j += 1) {
+//                 let indArray2 = array2[j];
+//                 if (indArray1 === indArray2) {
+//                         collectArray.push(indArray1);
+//             }}  }
+//             console.log(collectArray);
             
             
-            // let newArray = [];
-            // for (let i = 0; i < array1.length; i += 1) {
-                //     let indArray1 = array1[i];
-                //         if (array2.includes(indArray1)) {
-                    //             newArray.push(indArray1);
-                    //         }
-                    // }
-                    // console.log(newArray);
+//             let newArray = [];
+//             for (let i = 0; i < array1.length; i += 1) {
+//                     let indArray1 = array1[i];
+//                         if (array2.includes(indArray1)) {
+//                                 newArray.push(indArray1);
+//                             }
+//                     }
+//                     // console.log(newArray);
 //========================================================
 
 

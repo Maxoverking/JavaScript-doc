@@ -99,7 +99,7 @@
 //===============================================================
 
 // const clients = [12, 32, 6];
-// // let sum = 0 ;
+// let sum = 0 ;
 // let div = clients;
 // for (i = 0; i <= clients.length; i +=1) {
 //     sum += clients[i];
@@ -113,8 +113,8 @@
 // const clients = ["Mango", "Ajax", "Poly"];
 
 // for (const client of clients) {
-    //   console.log(client[0].toLowerCase());
-    // }
+//     console.log('el:',client.toLowerCase());
+// }
 
 //===============================================================
 
@@ -124,14 +124,12 @@
 
 // // Для чисел меньше чем порог срабатывает continue, выполнение тела прекращается
 // // и управление передаётся на следующую итерацию.
-// for (num = 0; num < numbers.length; num += 1) {
-    //   if (numbers[num] < threshold) {
-        //       continue;
-        
-        //   }
-        
-        //   console.log(`Число больше чем ${threshold}: ${numbers[num]}`);
-        // }
+// for (let num = 0; num < numbers.length; num += 1) {
+//       if (numbers[num] < threshold) {
+//               continue;
+//           }
+//           console.log(`Число больше чем ${threshold}: ${numbers[num]}`);
+//         }
 //===============================================================
 
 // const clients = ["Mango", "Ajax", "Max", 'Sem'];
