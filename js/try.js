@@ -551,42 +551,42 @@ console.log(lookUpProfile("Sherlock", "likes"));
 console.log(lookUpProfile("Bob", "number"));
 
 //=========================================================
-const createBtn = document.createElement('button');
-createBtn.innerText = 'Кнопка';
-createBtn.type = "button";
-createBtn.classList.add('btn-delete');
-document.body.append(createBtn);
+// const createBtn = document.createElement('button');
+// createBtn.innerText = 'Кнопка';
+// createBtn.type = "button";
+// createBtn.classList.add('btn-delete');
+// document.body.append(createBtn);
 
-createBtn.addEventListener('click', deleteBtn )
+// createBtn.addEventListener('click', deleteBtn )
 
-function deleteBtn() {
-  createBtn.remove();
+// function deleteBtn() {
+//   createBtn.remove();
 
   
-  const createBtn2 = document.createElement('button');
-  createBtn2.innerText = 'Кнопка2';
-  createBtn2.type = "button";
-  createBtn2.classList.add('btn-delete');
+//   const createBtn2 = document.createElement('button');
+//   createBtn2.innerText = 'Кнопка2';
+//   createBtn2.type = "button";
+//   createBtn2.classList.add('btn-delete');
   
-  const createBtn3 = document.createElement('button');
-  createBtn3.innerText = 'Кнопка3';
-  createBtn3.type = "button";
-  createBtn3.classList.add('btn-delete');
+//   const createBtn3 = document.createElement('button');
+//   createBtn3.innerText = 'Кнопка3';
+//   createBtn3.type = "button";
+//   createBtn3.classList.add('btn-delete');
   
 
-  document.body.append(createBtn2);
-  document.body.append(createBtn3);
+//   document.body.append(createBtn2);
+//   document.body.append(createBtn3);
 
-  createBtn2.addEventListener('click',createBtnBack);
+//   createBtn2.addEventListener('click',createBtnBack);
 
-  function createBtnBack() {
-    createBtn2.remove();
-    createBtn3.remove();
-    document.body.append(createBtn);
+//   function createBtnBack() {
+//     createBtn2.remove();
+//     createBtn3.remove();
+//     document.body.append(createBtn);
     
-  }
-}
+//   }
+// }
 
-console.log("🚀 ~ createBtn", createBtn);
+// console.log("🚀 ~ createBtn", createBtn);
 
 

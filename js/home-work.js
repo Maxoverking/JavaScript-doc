@@ -18,6 +18,9 @@ function createLi(text) {
 
     return li;
 }
+//=====================================================
+
+// Кнопка открытия меню
 
 const ul = document.createElement("ul");
 
@@ -42,6 +45,7 @@ btnRef.addEventListener("click", (event) => {
         btnRef.textContent = "Open menu";
     }
 });
+
 //==========================================
 
 // btnRef.addEventListener("click", (event) => {
