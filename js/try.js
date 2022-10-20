@@ -478,7 +478,7 @@ for (let liList of liLists) {
 
 const ulList = document.getElementById('tree');
 
-// console.log("🚀 ~ ulList", ulList);
+console.log("🚀 ~ ulList", ulList);
 
 ulList.addEventListener('click', (event) => {
   if (event.target.tagName !== "SPAN") {
@@ -487,7 +487,9 @@ ulList.addEventListener('click', (event) => {
   // console.log("🚀 ~ event", event.target);
   let childrenCont = event.target.parentNode.querySelector('ul');
 
-  // console.log("🚀 ~ childrenCont", childrenCont);
+  console.log("🚀 ~ childrenCont", childrenCont);
+  
+
   if (!childrenCont) {
     return;
   }
@@ -546,9 +548,9 @@ function lookUpProfile(name , prop) {
 
 
 // console.log(lookUpProfile(contacts));
-console.log(lookUpProfile("Kristian", "lastName"));
-console.log(lookUpProfile("Sherlock", "likes"));
-console.log(lookUpProfile("Bob", "number"));
+// console.log(lookUpProfile("Kristian", "lastName"));
+// console.log(lookUpProfile("Sherlock", "likes"));
+// console.log(lookUpProfile("Bob", "number"));
 
 //=========================================================
 // const createBtn = document.createElement('button');
@@ -588,5 +590,61 @@ console.log(lookUpProfile("Bob", "number"));
 // }
 
 // console.log("🚀 ~ createBtn", createBtn);
+//============================================================
 
+// const listEL = document.querySelector('.new-list');
 
+// // console.log("🚀 ~ listEL", listEL);
+// const elements = document.querySelectorAll('.we li');
+// console.log("🚀 ~ elements", elements);
+
+// const elementsAll = elements;
+// console.log("🚀 ~ elementsAll", elementsAll);
+
+// for (const element of elements) {
+
+//   console.log("🚀 ~ element", element);
+  
+// }
+
+// for (let i = 0; i < elements.length; i++) {
+//   const element = elements[i];
+
+//   console.log("🚀 ~ element", element);
+  
+// }
+// const el = document.querySelector('.rom');
+
+// console.log("🚀 ~ el", el);
+
+// // console.log("🚀 ~ listEL", listEL);
+
+// listEL.addEventListener('click', onClick);
+
+// function onClick() {
+//   // el.classList.toggle('hidd'); 
+//   for (const element of elements) {
+//     element.classList.toggle('hidd'); 
+//   }
+  
+// };
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// const func = n => n % 2 ;
+// const newArray = arr.filter(func);
+
+// console.log("🚀 ~ newArray", newArray);
+
+// // const remove = (arr, func) =>
+// //   // Проверяем, является ли arr массивом.
+// //   Array.isArray(arr)
+// //     // Фильтруем массив arr применяя функцию func к каждому элементу.
+// //     ? arr.filter(func).reduce((acc, val) => {
+// //         // Удаляем отфильтрованные элементы из оригинального массива.
+// //         arr.splice(arr.indexOf(val), 1);
+// //         // Возвращаем новый массив только с отфильтрованными элементами.
+// //         return acc.concat(val);
+// //       }, [])
+// //     : [];
+
+// console.log("🚀 ~ remove(arr, odd);", arr);
