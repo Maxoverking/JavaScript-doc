@@ -35,7 +35,35 @@ console.log("🚀 ~ str", str.endsWith('.json'));
 
 //===========================================================
 
-const messages = [1, 3, 5, 7, 3, 9, 8, 2, 5];
+let messages = [1, 3, 5, 7, 3, 9, 8, 2, 5, 15];
+let strTry = "sdsfsfcftgctgv,srccgdc";
+
+console.log("🚀 ~ strTry", strTry);
 
 
-console.log(messages.map( message => message * 5)); // 8
+
+console.log(messages.indexOf(2)); 
+console.log(messages.indexOf(-5)); 
+console.log(messages[3]); 
+console.log(messages[15]); 
+console.log(messages.includes(4)); 
+console.log(messages.includes(3)); 
+
+
+
+
+
+const makePromise = (text, delay) => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(text), delay);
+  });
+};
+
+const promiseA = makePromise("promiseA value", 1000);
+const promiseB = makePromise("promiseB value", 3000);
+
+Promise.race([promiseA, promiseB])
+  .then(value => console.log(value)) // "promiseA value"
+  .catch(error => console.log(error));
+  
+    
