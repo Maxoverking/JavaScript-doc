@@ -1,49 +1,86 @@
-let tooltipElem;
+async function getData() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const data = await response.json();
+    return data;
+}
+const postsElMain = document.querySelector('.posts')
+const paginationEl = document.querySelector('.pagination');
+const postEl = document.querySelectorAll('.post');
 
-    document.onmouseover = function(event) {
-      let target = event.target;
-
-      // console.log("🚀 ~ target", target);
-
-      // якщо у нас є HTML підказка...
-      let tooltipHtml = target.dataset.tooltip;
-
-    //   console.log("🚀 ~ tooltipHtml", tooltipHtml);
-      if (!tooltipHtml) return;
-
-      // ...створіть елемент підказки
-
-      tooltipElem = document.createElement('div');
-      tooltipElem.className = 'tooltip';
-      tooltipElem.innerHTML = tooltipHtml;
-      document.body.append(tooltipElem);
-
-      // розташуйте його над анотованим елементом (угорі по центру)
-      let coords = target.getBoundingClientRect();
-
-      console.log("🚀 ~ coords", coords);
-
-      let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
+const prevEl = document.querySelector('.prev');
+const nextEl = document.querySelector('.next');
 
 
-      if (left < 0) left = 0; // не перетинайте лівий край вікна
+async function mainFn() {
+    const postData = await getData();
 
-      let top = coords.top - tooltipElem.offsetHeight -5;
-      if (top < 0) { // якщо перетинає верхній край вікна, розташуйте знизу
-        top = coords.top + target.offsetHeight + 5;
-      }
+    // console.log("🚀 ~ postData", postData);
+    
 
-      tooltipElem.style.left = left + 'px';
-      tooltipElem.style.top = top + 'px';
-    };
+    let currentPage = 1 ;
+    let rows = 10;
+    displayList(postData, rows, currentPage);
+    displayPagination(postData, rows);
+    
+    function displayList(arrData, rowPerPage, currentPage) {
 
-    document.onmouseout = function(e) {
+        postsElMain.innerHTML = '';
+        currentPage -= 1;
+        const start = rowPerPage * currentPage;
+        const end = start + rowPerPage;
+        const paginatedData = arrData.slice(start, end);
+        
 
-      if (tooltipElem) {
-        tooltipElem.remove();
-        tooltipElem = null;
-      }
 
-    };
+        paginatedData.forEach(el => {
+            const postEl = document.createElement('div');
+            postEl.classList.add("post");
+            postEl.innerText = `${el.title}`
+            postsElMain.append(postEl)
+            
+        });
+}
+
+    function displayPagination(arrData,rowPerPage) {
+        const pagesCount = Math.ceil(arrData.length / rowPerPage);
+        const ulList = document.createElement('ul');
+        ulList.classList.add('pagination__list');
+        for (let i = 0; i < pagesCount; i++) {
+            const btnEl = paginationBtn(i + 1)
+            ulList.append(btnEl);
+        }
+        paginationEl.append(ulList);
+ 
+    }
+
+    function paginationBtn(page) { 
+        const btnEl = document.createElement('button');
+        btnEl.classList.add('pagination__item');
+        btnEl.innerText = page;
+        if (currentPage == page) {
+            btnEl.classList.add('pagination__item--active');
+        }
+
+
+        btnEl.addEventListener('click', () => {
+            currentPage = page;
+             if (currentPage == page) {                  
+                    btnEl.classList.remove('pagination__item--active')
+             }       
+            console.log("🚀 ~ currentPage", currentPage-1);
+            displayList(postData, rows, currentPage);
+
+            let currentItemBtn = document.querySelector('button.pagination__item--active');
+            currentItemBtn.classList.remove('pagination__item--active');
+            btnEl.classList.add('pagination__item--active');
+            
+           
+            
+        })
+        return btnEl;
+    }
+}
+mainFn()
+
 
     

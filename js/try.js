@@ -378,25 +378,16 @@
 // console.log("🚀 ~ result", result);
 
 //=====================================
+
+
+
+
+
+
+
+
+
 // Удаление блока с текстом
-// const btn = document.querySelector('.remove-button');
-
-// // console.log("🚀 ~ btn", btn);
-
-
-// btn.addEventListener('click',removeDiv)
-
-
-// function removeDiv(evt) {
-//   // console.log("🚀 ~ evt", evt.target);
-//    if (evt.target.className !== 'remove-button') return;
-//   let r = evt.target.closest('.pane');
-//   r.remove();
-//   // console.log("🚀 ~ r", r);
-
-
-// // console.log("🚀 ~ evt", evt.currentTarget); 
-// }
 
 // const div = document.getElementById('container');
 
@@ -414,9 +405,18 @@
 //     return;
 //   }
 //   let pane = evt.target.closest('.pane');
+//   // console.log("🚀 ~ pane", pane);
 //   pane.remove();
-   
 // }
+
+
+
+
+
+
+
+
+
 //============================================
 // //Создание дом дерева
 // const div = document.createElement('div');
@@ -478,7 +478,7 @@ for (let liList of liLists) {
 
 const ulList = document.getElementById('tree');
 
-console.log("🚀 ~ ulList", ulList);
+// console.log("🚀 ~ ulList", ulList);
 
 ulList.addEventListener('click', (event) => {
   if (event.target.tagName !== "SPAN") {
@@ -499,52 +499,52 @@ ulList.addEventListener('click', (event) => {
 //======================================================
 
 // Setup
-const contacts = [
-  {
-    firstName: "Akira",
-    lastName: "Laine",
-    number: "0543236543",
-    likes: ["Pizza", "Coding", "Brownie Points"],
-  },
-  {
-    firstName: "Harry",
-    lastName: "Potter",
-    number: "0994372684",
-    likes: ["Hogwarts", "Magic", "Hagrid"],
-  },
-  {
-    firstName: "Sherlock",
-    lastName: "Holmes",
-    number: "0487345643",
-    likes: ["Intriguing Cases", "Violin"],
-  },
-  {
-    firstName: "Kristian",
-    lastName: "Vos",
-    number: "unknown",
-    likes: ["JavaScript", "Gaming", "Foxes"],
-  },
-];
+// const contacts = [
+//   {
+//     firstName: "Akira",
+//     lastName: "Laine",
+//     number: "0543236543",
+//     likes: ["Pizza", "Coding", "Brownie Points"],
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//   },
+//   {
+//     firstName: "Sherlock",
+//     lastName: "Holmes",
+//     number: "0487345643",
+//     likes: ["Intriguing Cases", "Violin"],
+//   },
+//   {
+//     firstName: "Kristian",
+//     lastName: "Vos",
+//     number: "unknown",
+//     likes: ["JavaScript", "Gaming", "Foxes"],
+//   },
+// ];
 
-function lookUpProfile(name , prop) {
-  // Only change code below this line
+// function lookUpProfile(name , prop) {
+//   // Only change code below this line
 
-  for (let x = 0; x < contacts.length; x++) {
+//   for (let x = 0; x < contacts.length; x++) {
 
-    if (contacts[x].firstName === name) {
+//     if (contacts[x].firstName === name) {
     
-      if (contacts[x].hasOwnProperty(prop)) {
+//       if (contacts[x].hasOwnProperty(prop)) {
         
-        return contacts[x][prop];
-      } else {
-        return "No such property";
-      }
+//         return contacts[x][prop];
+//       } else {
+//         return "No such property";
+//       }
 
-    }
-  }
-  return "No such contact";
+//     }
+//   }
+//   return "No such contact";
   //Only change code above this line
-}
+// }
 
 
 // console.log(lookUpProfile(contacts));
@@ -648,3 +648,18 @@ function lookUpProfile(name , prop) {
 // //     : [];
 
 // console.log("🚀 ~ remove(arr, odd);", arr);
+// let r = [1, -2, 3, 4, 5];
+// function positiveSum(arr) {
+//   return arr.filter(el => el > 0).reduce((a, b) => a + b, 0);
+// }
+// console.log(positiveSum(r));
+
+
+// const q = "bitcoin take over the world maybe who knows perhaps";
+// function short(str) {
+//   // let arr = str.split(' ').sort((a, b) => a.length - b.length)[0].length;
+//   // let arr = str.split(' ').sort((a, b) => b.length - a.length).pop().length;
+//   console.log("🚀 ~ arr", arr);
+// }
+
+// console.log(short(q));

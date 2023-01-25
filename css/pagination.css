@@ -1,0 +1,91 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+button{
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 6px;
+}
+
+body{
+    background: gainsboro;
+    
+}
+li{
+    list-style: none;
+}
+.btn-list{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 20px;
+}
+/* .pagination{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+} */
+.prev{
+        width: 30px;
+    height: 40px;
+
+}
+.next{
+        width: 30px;
+    height: 40px;
+
+}
+.active{
+    background-color: aquamarine;
+}
+
+.wrap{
+        display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+.pag-arrow {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-position: 50%;
+    border: none;
+    background-color: #fff;
+    transition: background-color .25s ease-in;
+    border-radius: 5px;
+}
+
+.pagenumbers button {
+    width: 40px;
+    height: 40px;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: .5s;
+    color: #000;
+    font-family: Roboto,sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    font-style: normal;
+    background-color: #fff;
+}
+.pagenumbers button.active, .pagenumbers button:hover {
+    background-color: #ff6b08;
+    color: #fff;
+    border-radius: 5px;
+}
+.list{
+        display: contents;
+
+}
